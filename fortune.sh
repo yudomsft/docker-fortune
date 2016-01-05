@@ -8,7 +8,6 @@ if [ -z $LOGFILE ]; then
 	done
 else
 	touch $LOGFILE
-	tail -qF $LOGFILE &
 	for (( i=0; i<500; i++ ))
 	do
 		echo `date` `/usr/games/fortune -s` >> $LOGFILE
